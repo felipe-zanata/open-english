@@ -2,8 +2,8 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as condicaoEsperada
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.edge.service import Service as EdgeService
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
+# from selenium.webdriver.edge.service import Service as EdgeService
+# from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
@@ -41,8 +41,8 @@ class Open_English:
         options.add_argument("--start-maximized")
         logger.info('Iniciando Browser')
         try:
-            # self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-            self.driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
+            self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+            # self.driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
             self.wait = WebDriverWait(self.driver, 10)
             self.wait2 = WebDriverWait(self.driver, 120)
             self.driver.get(self.openEnglish)
