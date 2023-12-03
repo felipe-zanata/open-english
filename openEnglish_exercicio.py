@@ -140,7 +140,7 @@ class Open_English:
             while i <=3:
 
                 x = 1
-                while x <= 3:
+                while x <= 4:
 
                     try:
                         listaResposta = self.driver.find_elements(By.XPATH, 
@@ -169,7 +169,7 @@ class Open_English:
                             except:
                                 logger.warning('Elemento não encontrado.')
 
-                            if x == 3:
+                            if x == 4:
                                 try:
                                     selecaoBotao = self.wait2.until(
                                         condicaoEsperada.presence_of_element_located((By.XPATH, lSelecionaBotaofeedBack)))

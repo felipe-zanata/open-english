@@ -168,7 +168,7 @@ class Open_English_Unidade:
         except:
             logger.warning('Elemento não encontrado.')
         
-        while inicioUnidade < fimUnidade:
+        while inicioUnidade < 1000:#fimUnidade:
             time.sleep(1)
 
             validar_quantidade = self.validar_quantidade(llabelAtividade)
